@@ -1,0 +1,38 @@
+.TH nssandbox 1 2016 https://github.com/etbuira/nssandbox nssandbox
+
+.SH NAME
+.PP
+nssandbox \- Provides basic sandboxing using Linux namespaces
+
+.SH SYNOPSIS
+.PP
+.B nssandbox
+[
+.B \-i
+] [
+.B \-n
+] 
+.I command commandargs...
+
+.SH DESCRIPTION
+.PP
+.B nssandbox
+provides basic networking and IPC sandboxing around a child process.
+This is accomplished using Linux namespace (thus, you need a kernel
+compiled with CONFIG_IPC_NS and/or CONFIG_NET_NS).
+
+.SH OPTIONS
+.PP
+.TP 4
+.B \-i
+Enable IPC sandboxing
+.TP 4
+.B \-n
+Enable network sandboxing, and bring
+.B lo
+up
+
+.SH SEE ALSO
+.BR unshare (1),
+.BR unshare (2)
+
