@@ -1,0 +1,13 @@
+=== nssandbox
+Provides basic sandboxing using Linux namespaces.
+Homepage: https://github.com/etbuira/nssandbox
+
+=== Installation
+srcdir$ autoreconf -i
+builddir$ srcdir/configure
+builddir$ make
+builddir$ su -c 'make install'
+
+== License
+This is released under GPLv2
+
